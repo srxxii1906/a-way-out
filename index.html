@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Way Out — Help Her Stand On Her Own</title>
+<meta name="description" content="A college student in India is building financial independence to leave a controlling home safely.">
+<meta property="og:title" content="Help her become independent and leave home safely">
+<meta property="og:description" content="She's not asking anyone to fight her family. She just wants to make decisions about her own life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --surface:#ffffff; --ink:#111111; --muted:#555555;
+    --line:#e5e5e5; --accent:#111111; --accent-ink:#ffffff; --soft:#f2f2f2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#000000; --surface:#0d0d0d; --ink:#f5f5f5; --muted:#a3a3a3;
+      --line:#262626; --accent:#f5f5f5; --accent-ink:#000000; --soft:#1a1a1a;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font:400 17px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:88px}
+  a{color:var(--accent)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;gap:20px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+  nav .brand{font-family:Fraunces,serif;font-weight:700;color:var(--ink);font-size:18px;margin-right:auto}
+  header{padding:56px 0 32px}
+  .eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(34px,7vw,52px);line-height:1.1;margin:14px 0 18px}
+  .lede{font-size:19px;color:var(--muted)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;margin:24px 0}
+  .progress-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .raised{font-family:Fraunces,serif;font-size:32px;font-weight:700}
+  .goal,.meta{color:var(--muted);font-size:14px}
+  .bar{height:12px;background:var(--soft);border-radius:99px;overflow:hidden;margin:14px 0 10px}
+  .bar span{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width 1.2s}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 18px;border-radius:14px;font:600 16px Inter,sans-serif;text-decoration:none;border:1.5px solid var(--accent);cursor:pointer}
+  .btn.primary{background:var(--accent);color:var(--accent-ink)}
+  .btn.ghost{background:transparent;color:var(--accent)}
+  .btn.full{width:100%;margin-top:12px}
+  .upi-box{margin-top:20px}
+  .upi-label{font-size:14px;font-weight:600;margin-bottom:10px}
+  .amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .amounts button{padding:12px 0;border-radius:12px;border:1.5px solid var(--line);background:transparent;color:var(--ink);font:600 15px Inter,sans-serif;cursor:pointer}
+  .amounts button.on{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)}
+  .qr-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin:20px 0 4px}
+  #qr{background:#fff;padding:12px;border-radius:14px}
+  @media(max-width:600px){.qr-wrap{display:none}}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  h2{font-family:Fraunces,serif;font-size:28px;margin-bottom:18px}
+  .story p{margin-bottom:18px}
+  .pull{font-family:Fraunces,serif;font-size:23px;line-height:1.45;border-left:3px solid var(--accent);padding-left:18px;margin:28px 0}
+  .tw{font-size:13px;font-weight:600;text-transform:uppercase;color:var(--muted);background:var(--soft);display:inline-block;padding:6px 12px;border-radius:8px;margin-bottom:20px}
+  .breakdown{list-style:none}
+  .breakdown li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+  .breakdown li:last-child{border-bottom:0}
+  .why{display:block;color:var(--muted);font-size:14px}
+  .skills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+  .skills span{background:var(--soft);padding:6px 12px;border-radius:99px;font-size:14px}
+  details{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+  summary{font-weight:600;cursor:pointer}
+  details p{margin-top:12px;color:var(--muted)}
+  .updates{list-style:none;border-left:2px solid var(--line);padding-left:20px}
+  .updates li{margin-bottom:20px}
+  .updates time{font-size:13px;color:var(--muted);font-weight:600}
+  footer{padding:40px 0 24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+  .dock{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:12px 16px}
+  .dock .wrap{display:flex;gap:10px;padding:0}
+  .dock .btn{flex:1;padding:13px}
+  .toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:.3s}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <span class="brand">A Way Out</span>
+  <a href="#story">Her story</a><a href="#where">Where it goes</a><a href="#faq">Questions</a>
+</div></nav>
+
+<main class="wrap">
+  <header>
+    <p class="eyebrow">Emergency fund · India</p>
+    <h1>Help her become independent — and leave home safely.</h1>
+    <p class="lede">A college student whose life and future are being decided for her. She's not asking anyone to fight her family. She's asking for a chance to stand on her own.</p>
+
+    <div class="card" id="donate">
+      <div class="progress-top"><div class="raised" id="raised"></div><div class="goal" id="goal"></div></div>
+      <div class="bar"><span id="barFill"></span></div>
+      <div class="meta" id="meta"></div>
+
+      <div class="upi-box">
+  <div class="qr-wrap" style="display:flex">
+    <img src="qr.png" alt="UPI QR code" style="width:240px;border-radius:14px">
+  </div>
+  <a class="btn primary full" href="qr.png" download="donate-qr.png">Save QR to gallery</a>
+  <button class="btn ghost full" id="copyUpi">Copy UPI ID</button>
+  <ol class="meta" style="margin:14px 0 0 18px;line-height:1.9">
+    <li><b>On a laptop:</b> scan the QR with any UPI app.</li>
+    <li><b>On a phone:</b> tap "Save QR", open GPay/PhonePe → Scan → choose the image from gallery.</li>
+    <li><b>Or:</b> copy the UPI ID → open your UPI app → "Pay UPI ID" → paste.</li>
+  </ol>
+  <button class="btn ghost full" onclick="share()">Can't donate? Share this page</button>
+</div>
+    </div>
+  </header>
+
+  <section id="story">
+    <h2>Her story, in her words</h2>
+    <span class="tw">Content note: family control, emotional coercion</span>
+    <div class="story">
+      <p>I'm writing this because I need help becoming financially independent and eventually leaving my home safely.</p>
+      <p>I'm a college student, and for a long time my parents have been extremely restrictive about my life — my friendships, my relationships, and the choices I make for my future.</p>
+      <p>Things became much worse after they found out about my relationship. I fell in love with someone I met through college, and I wanted the freedom to decide for myself whether this is the person I build a future with. My parents strongly opposed it, and the restrictions and pressure became far more intense.</p>
+      <p>My phone has been taken away. My movements are questioned constantly. My father has threatened to stop my education. During my exams I was taken out of the state on a trip I didn't choose — I missed exams and now have a backlog to clear. On that trip I was pressured to promise I'd end my relationship and marry someone chosen for me. I did not make that promise freely.</p>
+      <p>I have very little privacy, and I've been told that choosing independence means being cut off. As long as I depend on them, I don't know how much of my own future I'll get to decide.</p>
+      <p class="pull">I don't want anyone to fight my family for me. I don't want revenge. I just want the ability to make decisions about my own life.</p>
+      <p>I'm building skills, looking for freelance work, and saving towards an emergency fund so I can support myself and leave safely. If you can give any amount, it goes straight into that fund. If you can't, please share this.</p>
+    </div>
+  </section>
+
+  <section id="where">
+    <h2>Where your money goes</h2>
+    <div class="card"><ul class="breakdown" id="breakdown"></ul></div>
+  </section>
+
+  <section id="hire">
+    <h2>Rather give her work than money?</h2>
+    <p>Independence that lasts comes from income. She's taking on remote freelance work:</p>
+    <div class="skills" id="skills"></div>
+    <a class="btn ghost full" id="hireBtn" href="#">Offer her a project</a>
+  </section>
+
+  <section id="faq">
+    <h2>Questions you might have</h2>
+    <details><summary>Why is this anonymous?</summary><p>Her phone, money and movements are monitored. Being identified would make things worse at home. Anonymity keeps her safe until she's out.</p></details>
+    <details><summary>How do I know this is real?</summary><p>You can't verify her like a registered charity, and we won't pretend otherwise. Every contribution and every rupee spent is logged in the updates below.</p></details>
+    <details><summary>Who runs this page?</summary><p>A few of her friends from college. Nobody takes a cut.</p></details>
+    <details><summary>Why doesn't she just leave?</summary><p>Leaving with no money, no place to stay and no income isn't independence — it's a crisis. She needs a financial cushion first.</p></details>
+  </section>
+
+  <section id="updates">
+    <h2>Updates</h2>
+    <ul class="updates" id="updateList"></ul>
+  </section>
+
+  <footer><p>A personal fundraiser run by friends of the beneficiary. Not a registered charity; contributions are not tax-deductible.</p></footer>
+</main>
+
+<div class="dock"><div class="wrap">
+  <a class="btn primary" href="#amounts">Donate</a>
+  <button class="btn ghost" onclick="share()">Share</button>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ===== EDIT HERE ===== */
+const CONFIG = {
+  upiId:     "meenakshi1906@fam",
+  payeeName: "Independence Fund",
+  amounts:   [100, 250, 500, 1000],
+  contactEmail: "YOUR-NEW-EMAIL@gmail.com",
+  goal: 150000, raised: 0, donors: 0, lastUpdated: "4 Oct 2026",
+  breakdown: [
+    { item: "Emergency fund",              amt: 50000, why: "A cushion for the first weeks after leaving" },
+    { item: "Rent + deposit (3 months)",   amt: 45000, why: "A safe place to stay" },
+    { item: "Clearing her backlog & fees", amt: 25000, why: "The exams she was made to miss" },
+    { item: "Laptop for freelance work",   amt: 30000, why: "So she can earn on her own" }
+  ],
+  skills: ["Content writing", "Canva design", "Data entry", "Tutoring"],
+  updates: [{ date: "4 Oct 2026", text: "Page launched. Thank you for reading this far." }]
+};
+/* ===================== */
+
+const $ = id => document.getElementById(id);
+const inr = n => "₹" + n.toLocaleString("en-IN");
+const toast = msg => { $("toast").textContent = msg; $("toast").classList.add("show"); setTimeout(() => $("toast").classList.remove("show"), 1800); };
+
+$("raised").textContent = inr(CONFIG.raised);
+$("goal").textContent = "raised of " + inr(CONFIG.goal);
+$("meta").textContent = (CONFIG.donors ? CONFIG.donors + " people have helped · " : "") + "Updated " + CONFIG.lastUpdated;
+requestAnimationFrame(() => $("barFill").style.width = Math.min(100, CONFIG.raised / CONFIG.goal * 100) + "%");
+$("breakdown").innerHTML = CONFIG.breakdown.map(b => `<li><span>${b.item}<span class="why">${b.why}</span></span><strong>${inr(b.amt)}</strong></li>`).join("");
+$("skills").innerHTML = CONFIG.skills.map(s => `<span>${s}</span>`).join("");
+$("hireBtn").href = "mailto:" + CONFIG.contactEmail + "?subject=Freelance%20project";
+$("updateList").innerHTML = CONFIG.updates.map(u => `<li><time>${u.date}</time><p>${u.text}</p></li>`).join("");
+
+let amt = CONFIG.amounts[1];
+const upiLink = a => `upi://pay?pa=${encodeURIComponent(CONFIG.upiId)}&pn=${encodeURIComponent(CONFIG.payeeName)}&am=${a}&cu=INR&tn=${encodeURIComponent("Independence fund")}`;
+const qr = new QRCode($("qr"), { width: 180, height: 180 });
+function refresh(){
+  $("upiPay").href = upiLink(amt);
+  $("upiPay").textContent = `Pay ₹${amt} with any UPI app`;
+  qr.clear(); qr.makeCode(upiLink(amt));
+  document.querySelectorAll("#amounts button").forEach(b => b.classList.toggle("on", +b.dataset.a === amt));
+}
+$("amounts").innerHTML = CONFIG.amounts.map(a => `<button data-a="${a}">₹${a}</button>`).join("");
+$("amounts").onclick = e => { if (e.target.dataset.a) { amt = +e.target.dataset.a; refresh(); } };
+$("copyUpi").onclick = () => navigator.clipboard.writeText(CONFIG.upiId).then(() => toast("UPI ID copied"));
+refresh();
+
+function share(){
+  if (navigator.share) { navigator.share({ title: document.title, url: location.href }).catch(()=>{}); return; }
+  navigator.clipboard.writeText(location.href).then(() => toast("Link copied"));
+}
+</script>
+</body>
+</html>
